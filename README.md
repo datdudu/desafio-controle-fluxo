@@ -1,19 +1,17 @@
-## Getting Started
+## Desafio Controle de Fluxo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Desafio se consiste em criar um programa que leia dois números, faça a subtração da segunda leitura pela primeira e itere sobre este resultado, imprimindo número por número da iteração feita. É necessário também tratar a excessão gerada.
 
-## Folder Structure
+## Solução
 
-The workspace contains two folders by default, where:
+Criada a classe Contador que é o coração da aplicação, tendo o método *Contar*, recebendo os dois parâmetros.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O método citado acima, primeiramente, valida se o primeiro parâmetro é maior ou igual ao segundo, caso seja, uma exceção do tipo *ParametrosInvalidosException* é lançada. Caso não seja, é feita a subtração do segundo parâmetro pelo primeiro e depois é feito um *for* iterando sobre o resultado da subtração, imprimindo cada iteração feita.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Foi criada uma classe para lidar com a exceção. A *ParametrosInvalidosException* retorna uma mensagem padrão, mas também tem um método que pode ser passado uma mensagem personalizada a ela, indicando o caso de erro.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+No método *main* é feito a leitura dos parâmetros e a execução deles dentro de um bloco *try-catch* para tratar a exceção criada.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-# desafio-controle-fluxo
+
+
